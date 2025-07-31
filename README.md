@@ -1,39 +1,81 @@
-# 🛒 Sistema de Vendas em Laravel
+Sistema de Vendas em Laravel 🚀
+Um projeto feito em Laravel 11 para gerenciar vendas, clientes e produtos de forma simples e direta.
 
-Seja bem-vindo ao **Sistema de Vendas**, uma aplicação web simples e funcional, criada com **Laravel 11**, voltada para o registro e gerenciamento de vendas de produtos.
+O que ele faz? ✨
+🔐 Autenticação: Sistema de login completo para os vendedores.
 
-Este projeto foi pensado para ser direto, eficiente e fácil de manter, com uma estrutura clara e funcionalidades essenciais para controle de vendas do dia a dia.
+📦 Produtos: Você pode adicionar, editar, listar e excluir produtos do seu catálogo.
 
----
+👥 Clientes: Gerenciamento completo da sua base de clientes.
 
-## ✨ Funcionalidades
+💰 Vendas:
 
-- ✅ Autenticação de usuários (vendedores)
-- 📦 Cadastro completo de **Produtos** (CRUD)
-- 👥 Cadastro completo de **Clientes** (CRUD)
-- 🧾 Registro de **vendas com múltiplos itens** e **parcelamento customizável**
-- 📝 Edição e exclusão de vendas registradas
-- 🔍 Filtros de busca na listagem de vendas
+Criação de vendas com múltiplos itens.
 
----
+Gerador de parcelas com datas e valores customizáveis.
 
-## 🧰 Tecnologias Utilizadas
+Edição e exclusão de vendas já registradas.
 
-- **Backend:** Laravel 11, PHP 8.2+
-- **Frontend:** Blade, Tailwind CSS, JavaScript (com jQuery)
-- **Banco de Dados:** MySQL ou MariaDB (recomendado)
+🔍 Busca Avançada: Filtros por data e cliente na lista de vendas.
 
----
+📄 PDF: Download de um resumo completo da venda com um clique.
 
-## 🚀 Como Instalar e Rodar o Projeto
+Tech Stack 💻
+Backend: Laravel 11 & PHP 8.2+
 
-Antes de começar, certifique-se de ter instalado:
-- PHP 8.2+
-- Composer
-- Node.js e NPM
-- Um servidor de banco de dados (MySQL ou MariaDB)
+Frontend: Blade, Tailwind CSS & JavaScript (jQuery)
 
-### 1. Clone o projeto
-```bash
+Banco de Dados: SQL (MySQL/MariaDB)
+
+PDFs: barryvdh/laravel-dompdf
+
+Como Rodar o Projeto na sua Máquina 🛠️
+Para colocar o sistema no ar, siga estes passos:
+
+1. Preparando o Terreno:
+
+Primeiro, clone o repositório e entre na pasta do projeto.
+
 git clone https://github.com/jotacamara50/sistema-vendas-laravel.git
 cd sistema-vendas-laravel
+
+Depois, instale todas as dependências do PHP e do JavaScript.
+
+composer install
+npm install
+
+2. Configurando o Ambiente:
+
+Copie o .env.example para criar seu próprio arquivo de configuração.
+
+cp .env.example .env
+
+Agora, abra o arquivo .env e configure a conexão com seu banco de dados (DB_DATABASE, DB_USERNAME, DB_PASSWORD).
+
+Depois, gere a chave da aplicação:
+
+php artisan key:generate
+
+3. Criando e Populando o Banco:
+
+Execute as migrations para criar todas as tabelas.
+
+php artisan migrate
+
+⚠️ Passo Importante! Para o sistema funcionar, você precisa cadastrar as formas de pagamento. Rode o seeder:
+
+php artisan db:seed --class=PaymentMethodSeeder
+
+4. Subindo os Servidores:
+
+Você precisa de dois terminais abertos.
+
+No primeiro, suba o servidor do Laravel:
+
+php artisan serve
+
+No segundo, inicie o Vite para compilar o CSS e JS:
+
+npm run dev
+
+Pronto! Agora é só acessar http://127.0.0.1:8000 no seu navegador.
