@@ -18,16 +18,12 @@ Edição e exclusão de vendas já registradas.
 
 🔍 Busca Avançada: Filtros por data e cliente na lista de vendas.
 
-📄 PDF: Download de um resumo completo da venda com um clique.
-
 Tech Stack 💻
 Backend: Laravel 11 & PHP 8.2+
 
 Frontend: Blade, Tailwind CSS & JavaScript (jQuery)
 
 Banco de Dados: SQL (MySQL/MariaDB)
-
-PDFs: barryvdh/laravel-dompdf
 
 Como Rodar o Projeto na sua Máquina 🛠️
 Para colocar o sistema no ar, siga estes passos:
